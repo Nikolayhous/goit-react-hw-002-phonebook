@@ -10,7 +10,7 @@
     margin-left: auto;
     margin-bottom: 35px;
     padding: 20px;
-    background-color: aliceblue;
+    background-color: rgba(209, 233, 253, 0.678);
     border: 2px solid black;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 1),
         -23px 0 20px -23px rgba(0, 0, 0, 0.8),
@@ -23,7 +23,7 @@
     max-width: 250px;
     font-size: 22px;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .label__agree {
@@ -45,7 +45,7 @@
     display: block;
     max-width: 120px;
     font-size: 16px;
-    margin-top: 25px;
+    margin-top: 10px;
     padding: 5px;
     cursor: pointer;
     border: none;
