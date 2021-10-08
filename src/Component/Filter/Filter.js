@@ -1,4 +1,5 @@
 import s from './Filter.module.css';
+import PropTypes from 'prop-types';
 
 function Filter({ filter, onChange }) {
     return (
@@ -16,5 +17,10 @@ function Filter({ filter, onChange }) {
         </div>
     );
 }
+
+Filter.propTypes = {
+    onChange: PropTypes.func.isRequired,
+    filter: PropTypes.string.isRequired,
+};
 
 export default Filter;

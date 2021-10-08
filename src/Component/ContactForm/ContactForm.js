@@ -1,5 +1,5 @@
 import { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
 import s from './Form.module.css';
 
@@ -106,5 +106,18 @@ class ContactForm extends Component {
         );
     }
 }
+
+ContactForm.propTypes = {
+    name: PropTypes.string,
+    number: PropTypes.number,
+    agree: PropTypes.bool,
+    onSubmit: PropTypes.func.isRequired,
+    handleSubmit: PropTypes.func,
+    handleChange: PropTypes.func,
+    handleAgreeChange: PropTypes.func,
+    nameId: PropTypes.number,
+    numberId: PropTypes.number,
+    agreeId: PropTypes.number,
+};
 
 export default ContactForm;
