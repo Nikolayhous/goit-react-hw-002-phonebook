@@ -85,17 +85,17 @@ class ContactForm extends Component {
                             onChange={handleChange}
                         />
                     </label>
-                    <label className={s.label} htmlFor={agreeId}>
-                        <span className={s.agree}>agree</span>
+                    <label className={s.label__agree} htmlFor={agreeId}>
                         <input
                             id={agreeId}
-                            className={s.inputName}
+                            className={s.checkbox}
                             value={agree}
                             type="checkbox"
                             name="agree"
                             checked={agree}
                             onChange={handleAgreeChange}
                         />
+                        agree
                     </label>
 
                     <button className={s.btn} disabled={!agree}>
