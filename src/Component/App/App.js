@@ -1,9 +1,9 @@
 import { Component } from 'react';
 import s from './App.module.css';
-import Container from './Component/Container';
-import ContactForm from './/Component/ContactForm';
-import Filter from './Component/Filter';
-import ContactList from './Component/ContactList';
+import Container from '../Container';
+import ContactForm from '../ContactForm';
+import Filter from '../Filter';
+import ContactList from '../ContactList';
 
 class App extends Component {
     state = {
@@ -17,8 +17,9 @@ class App extends Component {
     };
 
     formSubmitHandler = data => {
+        const { contacts } = this.state;
         if (
-            this.state.contacts.some(
+            contacts.some(
                 element =>
                     element.name.toLowerCase() === data.name.toLowerCase(),
             )

@@ -37,27 +37,15 @@ class ContactForm extends Component {
         this.setState({ name: '', number: '', agree: false });
     };
 
-    nameId = uuidv4();
-    numberId = uuidv4();
-    agreeId = uuidv4();
-
     render() {
-        const {
-            handleSubmit,
-            handleChange,
-            handleAgreeChange,
-            nameId,
-            numberId,
-            agreeId,
-        } = this;
+        const { handleSubmit, handleChange, handleAgreeChange } = this;
         const { name, number, agree } = this.state;
         return (
             <div className={s.section__form}>
                 <form className={s.form} onSubmit={handleSubmit}>
-                    <label className={s.label} htmlFor={nameId}>
+                    <label className={s.label}>
                         Name
                         <input
-                            id={nameId}
                             className={s.inputName}
                             value={name}
                             type="text"
@@ -70,10 +58,9 @@ class ContactForm extends Component {
                         />
                     </label>
 
-                    <label className={s.label} htmlFor={numberId}>
+                    <label className={s.label}>
                         Number
                         <input
-                            id={numberId}
                             className={s.inputName}
                             type="tel"
                             value={number}
@@ -85,9 +72,8 @@ class ContactForm extends Component {
                             onChange={handleChange}
                         />
                     </label>
-                    <label className={s.label__agree} htmlFor={agreeId}>
+                    <label className={s.label__agree}>
                         <input
-                            id={agreeId}
                             className={s.checkbox}
                             value={agree}
                             type="checkbox"
@@ -108,9 +94,6 @@ class ContactForm extends Component {
 }
 
 ContactForm.propTypes = {
-    name: PropTypes.string,
-    number: PropTypes.number,
-    agree: PropTypes.bool,
     onSubmit: PropTypes.func.isRequired,
     handleSubmit: PropTypes.func,
     handleChange: PropTypes.func,
